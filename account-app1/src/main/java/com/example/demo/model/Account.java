@@ -8,7 +8,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
+//@Data
 @Entity
 @Table(name = "account_table")
 public class Account {
@@ -22,6 +22,63 @@ public class Account {
 	private String accountHolderAddress;
 	@Column(name = "account_holder_email")
 	private String email;
+	
+	
+	
+	public String getAccountNumber() {
+		return accountNumber;
+	}
+
+
+
+	public void setAccountNumber(String accountNumber) {
+		this.accountNumber = accountNumber;
+	}
+
+
+
+	public String getAccountHolderName() {
+		return accountHolderName;
+	}
+
+
+
+	public void setAccountHolderName(String accountHolderName) {
+		this.accountHolderName = accountHolderName;
+	}
+
+
+
+	public String getAccountHolderAddress() {
+		return accountHolderAddress;
+	}
+
+
+
+	public void setAccountHolderAddress(String accountHolderAddress) {
+		this.accountHolderAddress = accountHolderAddress;
+	}
+
+
+
+	public String getEmail() {
+		return email;
+	}
+
+
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+
+
+	public Account() {
+		super();
+	}
+
+
+
 	public Account(String accountNumber, String accountHolderName, String accountHolderAddress, String email) {
 		super();
 		this.accountNumber = accountNumber;
@@ -29,30 +86,9 @@ public class Account {
 		this.accountHolderAddress = accountHolderAddress;
 		this.email = email;
 	}
-	public String getAccountNumber() {
-		return accountNumber;
-	}
-	public void setAccountNumber(String accountNumber) {
-		this.accountNumber = accountNumber;
-	}
-	public String getAccountHolderName() {
-		return accountHolderName;
-	}
-	public void setAccountHolderName(String accountHolderName) {
-		this.accountHolderName = accountHolderName;
-	}
-	public String getAccountHolderAddress() {
-		return accountHolderAddress;
-	}
-	public void setAccountHolderAddress(String accountHolderAddress) {
-		this.accountHolderAddress = accountHolderAddress;
-	}
-	public String getEmail() {
-		return email;
-	}
-	public void setEmail(String email) {
-		this.email = email;
-	}
+
+
+
 	@Override
 	public String toString() {
 		return "Account [accountNumber=" + accountNumber + ", accountHolderName=" + accountHolderName

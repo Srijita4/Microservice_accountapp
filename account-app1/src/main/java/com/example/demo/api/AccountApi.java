@@ -60,13 +60,12 @@ public class AccountApi {
 		return accountService.getAccountByaccountNumber(accountNumber);
 	}
 	
-	@GetMapping
-	("/{accountNumber}")
-	public Account getAccountByEmail(@PathVariable("email") String email)
-			throws com.example.demo.exception.AccountNotFoundException {
-		return accountService.getAccountByaccountNumber(email);
-	}
-	
+	/*
+	 * @GetMapping ("/{accountNumber}") public Account
+	 * getAccountByEmail(@PathVariable("email") String email) throws
+	 * com.example.demo.exception.AccountNotFoundException { return
+	 * accountService.getAccountByaccountNumber(email); }
+	 */
 	@PutMapping("/{accountNumber}")
 	public Account updateAccount(@PathVariable("accountNumber") String accountNumber, @RequestBody Account account)
 			throws AccountNotFoundException {
@@ -77,12 +76,12 @@ public class AccountApi {
 	{
 		accountService.deleteAccountByAccountNumber(accountNumber);
 	}
-	@DeleteMapping("/{accountNumber}")
-	public void deleteAccountByeEmail(@PathVariable("email") String email) throws AccountNotFoundException
-	{
-		accountService.deleteAccountByAccountNumber(email);
-	}
-
+	/*
+	 * @DeleteMapping("/{accountNumber}") public void
+	 * deleteAccountByeEmail(@PathVariable("email") String email) throws
+	 * AccountNotFoundException {
+	 * accountService.deleteAccountByAccountNumber(email); }
+	 */
 	
 
 }
